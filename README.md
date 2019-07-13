@@ -146,7 +146,7 @@ The `unattended-upgrades` package can be used to automatically install important
   APT::Periodic::Unattended-Upgrade "1";
   ```
 - Enable it: `sudo dpkg-reconfigure --priority=low unattended-upgrades`.
-# - Restart Apache: `sudo service apache2 restart`.
+- Restart Apache: `sudo service apache2 restart`.
 
 **References**
 - Official Ubuntu Documentation, [Automatic Updates](https://help.ubuntu.com/lts/serverguide/automatic-updates.html).
