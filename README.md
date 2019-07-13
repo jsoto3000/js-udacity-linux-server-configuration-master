@@ -118,11 +118,12 @@ ssh -i ~/.ssh/lightsail_key.rsa ubuntu@34.236.245.164
 - Install sendmail for email notice: `sudo apt-get install sendmail iptables-persistent`.
 - Create a copy of a file: `sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`.
 - Change the settings in `/etc/fail2ban/jail.local` file:
+  
   ```
   set bantime = 600
-  destemail = useremail@domain
-#  action = %(action_mwl)s 
+  destemail = useremail@domain 
   ```
+
 - Under `[sshd]` change `port = ssh` by `port = 2200`.
 - Restart the service: `sudo service fail2ban restart`.
 
