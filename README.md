@@ -452,8 +452,7 @@ following lines to configure the virtual host:
 
   ```
   <VirtualHost *:80>
-	  ServerName 13.59.39.163
-    ServerAlias ec2-13-59-39-163.us-west-2.compute.amazonaws.com
+	  ServerName 134.236.245.164
 	  WSGIScriptAlias / /var/www/catalog/catalog.wsgi
 	  <Directory /var/www/catalog/catalog/>
 	  	Order allow,deny
@@ -569,7 +568,23 @@ The following prompt will be returned:
 - Restart Apache again: `sudo service apache2 restart`.
 - Open your browser to http://134.236.245.164.
 
+### Step 24: Disable Root Login (Review Feedback)
 
+- Open the file `/etc/ssh/sshd_config` with `nano`:
+   ```
+   # nano /etc/ssh/sshd_config
+   ```
+
+- Find the line `PermitRootLogin yes` and change it to `PermitRootLogin no`.
+
+- Restart the SSH server:
+   ```
+   # service ssh restart
+   ```
+
+### Step 25: Reviewed Error Logs (Review Feedback)
+
+- sudo tail -f /var/log/apache2/error.log
 
 ## Useful commands
 
